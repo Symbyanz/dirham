@@ -1,0 +1,159 @@
+.tap {
+    position: relative;
+    .crystal {
+        position: absolute;
+        @media (max-width: $md4 + px) {
+            display: none;
+        }
+        &:nth-child(1) {
+            z-index: 0;
+            width: 9vw;
+            height: 9vw;
+            left: 42vw;
+            background: url("../img/psevdo/crystal70.png") center / cover;
+            top: calc(50% - 5vw);
+            transform: rotate(-60deg);
+        }
+        &:nth-child(2) {
+            z-index: 4;
+            width: 16vw;
+            height: 16vw;
+            background: url("../img/psevdo/crystal0.png") center / cover;
+            transform: rotate(-105deg);
+            bottom: -11vw;
+            left: -11vw;
+            opacity: 1;
+        }
+        &:nth-child(3) {
+            z-index: 4;
+            width: 11vw;
+            height: 11vw;
+            background: url("../img/psevdo/crystal30.png") center / cover;
+            transform: rotate(30deg);
+            right: 20vw;
+            bottom: -11vw;
+            opacity: 1;
+        }
+    }
+    .section__subtitle.-mini {
+        margin-bottom: 70px;
+        @media (max-width: $md3 + px) {
+            margin-bottom: 50px;
+        }
+        @media (max-width: $md5 + px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__box {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $md4 + px) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        width: 50%;
+        padding: 50px;
+        @media (max-width: 1769px) {
+            padding: 50px 20px;
+        }
+        @media (max-width: $md4 + px) {
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+        @media (max-width: $md5 + px) {
+            padding: 0;
+        }
+    }
+
+    &__slider {
+        width: 50%;
+        padding: 50px 70px;
+        @media (max-width: 1769px) {
+            padding: 50px 20px;
+        }
+        @media (max-width: $md4 + px) {
+            padding: 0 20px;
+            width: 600px;
+            margin: 0 auto;
+        }
+        @media (max-width: 679px) {
+            width: 100%;
+        }
+        @media (max-width: $md5 + px) {
+            padding: 0;
+        }
+        &-container {
+            width: 100%;
+        }
+        .owl-item {
+            opacity: 0.25;
+            transition: opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+            transform: scale3d(0.6, 0.6, 1);
+        }
+        .owl-item.active {
+            z-index: 2;
+            transform: scale3d(0.6, 0.6, 1) translateX(50%);
+        }
+        .owl-item.active.center {
+            opacity: 1;
+            z-index: 3;
+            transform: scale3d(1, 1, 1) translateX(0);
+            & + .owl-item.active {
+                transform: scale3d(0.6, 0.6, 1) translateX(-50%);
+            }
+        }
+        .owl-prev span,
+        .owl-next span {
+            position: absolute;
+            top: calc(50% - 25px);
+            font-size: 0;
+            width: 50px;
+            height: 50px;
+            background: url("../img/icons/p-left.svg") center / cover;
+            opacity: 0.5;
+            font-size: 0;
+            cursor: pointer;
+            transition: opacity 0.3s ease 0s;
+            @media (max-width: $md3 + px) {
+                top: calc(50% - 15px);
+                width: 30px;
+                height: 30px;
+            }
+            @media (max-width: $md5 + px) {
+                width: 20px;
+                height: 20px;
+                top: calc(50% - 10px);
+            }
+            &:hover {
+                opacity: 1;
+            }
+        }
+        .owl-prev {
+            left: 0;
+        }
+        .owl-next span {
+            right: 0;
+            transform: rotate(180deg);
+        }
+    }
+    &__item {
+        width: 270px;
+        @media (max-width: 1769px) {
+            width: 200px;
+        }
+        @media (max-width: $md3 + px) {
+            width: auto;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

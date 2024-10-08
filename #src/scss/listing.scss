@@ -1,0 +1,112 @@
+/*_____ 𝔅𝔢𝔤𝔦𝔫 listing [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+.section__listing {
+    margin: 100px 0px 0px 0px;
+    padding: 0;
+    height: 64px;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: $md4 + px) {
+        height: 36px;
+        padding: 0;
+        margin: 70px 0px 0px 0px;
+    }
+}
+.listing {
+    width: 100%;
+    background-color: #131715;
+
+    &__content {
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 64px;
+        @media (max-width: $md4 + px) {
+            height: 36px;
+        }
+    }
+    &__slider {
+        width: 100%;
+        height: 100%;
+    }
+    &__item {
+        margin: 0px 30px 0px 0px;
+        // around delete after link owl
+        height: 64px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        @media (max-width: $md4 + px) {
+            height: 36px;
+        }
+    }
+
+    &__item-img {
+        max-width: 52px;
+        flex-shrink: 0;
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    &__item-persent {
+        background: -webkit-linear-gradient(260deg, #fbee70 15%, #c28b38 50%, #e4ae40 95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 12px;
+        font-weight: 700;
+        margin-right: 16px;
+        margin-left: 6px;
+    }
+
+    &__item-price {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+/*_____ 𝔈𝔫𝔡 listing [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+/*_____ 𝔅𝔢𝔤𝔦𝔫 graphic list style [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+.graph {
+    &__wrap {
+        position: relative;
+        picture {
+            position: relative;
+        }
+    }
+    &__glow {
+        position: absolute;
+        right: -15px;
+        top: calc(50% - 25px);
+        width: 56px;
+        height: 50px;
+    }
+    &__arrow {
+        position: absolute;
+        right: 0px;
+        top: calc(50% - 4px);
+        width: 12px;
+        height: 12px;
+    }
+}
+/*_____ 𝔈𝔫𝔡 graphic list style [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+
+/*_____ 𝔅𝔢𝔤𝔦𝔫 owl adding settings [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+.listing .owl-carousel {
+    width: 100%;
+}
+.listing .owl-carousel .owl-item img {
+    width: auto;
+}
+.listing .owl-item {
+    width: 270px !important;
+    height: 64px;
+    @media (max-width: $md4 + px) {
+        height: 36px;
+    }
+}
+/*_____ 𝔈𝔫𝔡 owl adding settings [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/

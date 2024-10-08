@@ -1,0 +1,539 @@
+.crypto {
+    .crystal {
+        position: absolute;
+        @media (max-width: $md4 + px) {
+            display: none;
+        }
+        &:nth-child(1) {
+            z-index: 0;
+            width: 7vw;
+            height: 7vw;
+            right: 20vw;
+            top: 5vw;
+            transform: rotate(-60deg);
+            background: url("../img/psevdo/crystal70.png") center / cover;
+        }
+        &:nth-child(2) {
+            z-index: 4;
+            width: 12vw;
+            height: 12vw;
+            transform: rotate(-60deg);
+            background: url("../img/psevdo/crystal30.png") center / cover;
+            bottom: -4vw;
+            left: 14vw;
+        }
+        &:nth-child(3) {
+            z-index: 4;
+            width: 16vw;
+            height: 16vw;
+            background: url("../img/psevdo/crystal0.png") center / cover;
+            transform: rotate(105deg);
+            right: 5vw;
+            bottom: -8vw;
+        }
+    }
+
+    &__title {
+        margin-bottom: 50px;
+        @media (max-width: $md5 + px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__slider {
+        .owl-prev span,
+        .owl-next span {
+            position: absolute;
+            top: calc(50% - 25px);
+            font-size: 0;
+            width: 50px;
+            height: 50px;
+            background: url("../img/icons/arrow.png") center / cover;
+            opacity: 0.5;
+            font-size: 0;
+            cursor: pointer;
+            transition: opacity 0.3s ease 0s;
+            &:hover {
+                opacity: 1;
+            }
+            @media (max-width: 1259px) {
+                width: 40px;
+                height: 40px;
+                top: calc(50% - 20px);
+            }
+            @media (max-width: 979px) {
+                width: 30px;
+                height: 30px;
+                top: calc(50% - 15px);
+            }
+            @media (max-width: 419px) {
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .owl-prev span {
+            left: 40px;
+            transform: rotate(180deg);
+            @media (max-width: 1419px) {
+                left: 0;
+            }
+            @media (max-width: 979px) {
+                left: 40px;
+            }
+            @media (max-width: 769px) {
+                left: 0;
+            }
+        }
+        .owl-next span {
+            right: 40px;
+            @media (max-width: 1419px) {
+                right: 0;
+            }
+            @media (max-width: 979px) {
+                right: 40px;
+            }
+            @media (max-width: 769px) {
+                right: 0;
+            }
+        }
+    }
+
+    &__item {
+        min-height: calc(100vh - 264px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $md3 + px) {
+            min-height: calc(100vh - 247px);
+        }
+        @media (max-width: $md4 + px) {
+            min-height: calc(100vh - 177px);
+        }
+        @media (max-width: $md5 + px) {
+            min-height: 450px;
+        }
+    }
+
+    &__list {
+        position: relative;
+        width: 730px;
+        margin-bottom: 50px;
+        @media (max-width: $md5 + px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 1259px) {
+            width: 500px;
+        }
+        @media (max-width: 979px) {
+            width: 300px;
+        }
+        @media (max-width: 659px) {
+            width: 100%;
+            height: 300px;
+        }
+        @media (max-width: 529px) {
+            height: 200px;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    &__lines {
+        width: 100%;
+        @media (max-width: 659px) {
+            display: none;
+        }
+    }
+    &__coin {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75%;
+        right: 0;
+        margin: 0 auto;
+        @media (max-width: 659px) {
+            width: 300px;
+        }
+        @media (max-width: 529px) {
+            width: 140px;
+            margin: 0;
+        }
+        @media (max-width: 419px) {
+            width: 140px;
+        }
+        @media (max-width: 369px) {
+            width: 100px;
+        }
+    }
+    &__link {
+        font-size: 21px;
+        font-weight: 600;
+        width: 250px;
+        height: 56px;
+        background: none;
+        @media (max-width: $md3 + px) {
+            height: 52px;
+            width: 220px;
+            font-size: 18px;
+        }
+        @media (max-width: $md4 + px) {
+            height: 40px;
+            max-width: 100%;
+        }
+        &.-gold {
+            background: -webkit-linear-gradient(320deg, #fbee70 15%, #c28b38 50%, #e4ae40 95%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            border: 2px solid;
+            border-image: linear-gradient(320deg, #fbee70 15%, #c28b38 50%, #e4ae40 95%) 1;
+            transition: box-shadow 0.3s ease 0s;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(251, 238, 112, 0.5);
+            }
+        }
+
+        &.-silver {
+            background: -webkit-linear-gradient(320deg, #d5d5da 15%, #91909e 50%, #c8c6cc 95%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            border: 2px solid;
+            border-image: linear-gradient(320deg, #d5d5da 15%, #575662 50%, #c8c6cc 85%) 1;
+            transition: box-shadow 0.3s ease 0s;
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0 0 10px rgba(213, 213, 218, 0.5);
+            }
+        }
+    }
+}
+
+/*_____ 𝔅𝔢𝔤𝔦𝔫 items [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+
+.crypto__list {
+    &-item {
+        position: absolute;
+        width: 200px;
+        font-size: 18px;
+        line-height: 1.375;
+        color: rgba(255, 255, 255, 0.75);
+        text-align: center;
+        @media (max-width: 1259px) {
+            width: 160px;
+            font-size: 15px;
+        }
+        @media (max-width: 979px) {
+            font-size: 11px;
+            width: 120px;
+        }
+        @media (max-width: 419px) {
+            font-size: 9px;
+            width: 90px;
+        }
+    }
+    &.-six {
+        .crypto__list-item {
+            &:nth-child(1) {
+                top: -25px;
+                left: -160px;
+            }
+            &:nth-child(2) {
+                top: 230px;
+                left: -230px;
+            }
+            &:nth-child(3) {
+                top: 500px;
+                left: -160px;
+            }
+            &:nth-child(4) {
+                top: -25px;
+                right: -160px;
+            }
+            &:nth-child(5) {
+                top: 230px;
+                right: -230px;
+            }
+            &:nth-child(6) {
+                top: 500px;
+                right: -160px;
+            }
+            @media (max-width: 1259px) {
+                &:nth-child(1) {
+                    left: -130px;
+                }
+                &:nth-child(2) {
+                    top: 155px;
+                    left: -200px;
+                }
+                &:nth-child(3) {
+                    top: 340px;
+                    left: -130px;
+                }
+                &:nth-child(4) {
+                    right: -130px;
+                }
+                &:nth-child(5) {
+                    top: 155px;
+                    right: -200px;
+                }
+                &:nth-child(6) {
+                    top: 340px;
+                    right: -130px;
+                }
+            }
+            @media (max-width: 979px) {
+                &:nth-child(1) {
+                    top: -20px;
+                    left: -90px;
+                }
+                &:nth-child(2) {
+                    top: 90px;
+                    left: -130px;
+                }
+                &:nth-child(3) {
+                    top: 200px;
+                    left: -90px;
+                }
+                &:nth-child(4) {
+                    top: -20px;
+                    right: -90px;
+                }
+                &:nth-child(5) {
+                    top: 90px;
+                    right: -130px;
+                }
+                &:nth-child(6) {
+                    top: 200px;
+                    right: -90px;
+                }
+            }
+            @media (max-width: 659px) {
+                &:nth-child(1) {
+                    top: 0;
+                    left: 70px;
+                }
+                &:nth-child(2) {
+                    top: calc(50% - 20px);
+                    left: 30px;
+                }
+                &:nth-child(3) {
+                    top: calc(100% - 40px);
+                    left: 70px;
+                }
+                &:nth-child(4) {
+                    top: 0;
+                    right: 70px;
+                }
+                &:nth-child(5) {
+                    top: calc(50% - 20px);
+                    right: 30px;
+                }
+                &:nth-child(6) {
+                    top: calc(100% - 40px);
+                    right: 70px;
+                }
+            }
+            @media (max-width: 419px) {
+                &:nth-child(1),
+                &:nth-child(3) {
+                    left: 40px;
+                }
+                &:nth-child(2) {
+                    left: 20px;
+                }
+                &:nth-child(4),
+                &:nth-child(6) {
+                    right: 40px;
+                }
+                &:nth-child(5) {
+                    right: 20px;
+                }
+            }
+        }
+    }
+
+    &.-eight {
+        .crypto__list-item {
+            &:nth-child(1) {
+                top: -25px;
+                left: -160px;
+            }
+            &:nth-child(2) {
+                top: 140px;
+                left: -230px;
+            }
+            &:nth-child(3) {
+                top: 305px;
+                left: -230px;
+            }
+            &:nth-child(4) {
+                top: 465px;
+                left: -160px;
+            }
+
+            &:nth-child(5) {
+                top: -25px;
+                right: -160px;
+            }
+            &:nth-child(6) {
+                top: 140px;
+                right: -230px;
+            }
+            &:nth-child(7) {
+                top: 295px;
+                right: -230px;
+            }
+            &:nth-child(8) {
+                top: 460px;
+                right: -160px;
+            }
+            @media (max-width: 1259px) {
+                &:nth-child(1) {
+                    top: -25px;
+                    left: -140px;
+                }
+                &:nth-child(2) {
+                    top: 95px;
+                    left: -210px;
+                }
+                &:nth-child(3) {
+                    top: 200px;
+                    left: -210px;
+                }
+                &:nth-child(4) {
+                    top: 320px;
+                    left: -140px;
+                }
+
+                &:nth-child(5) {
+                    top: -25px;
+                    right: -140px;
+                }
+                &:nth-child(6) {
+                    top: 95px;
+                    right: -210px;
+                }
+                &:nth-child(7) {
+                    top: 195px;
+                    right: -210px;
+                }
+                &:nth-child(8) {
+                    top: 305px;
+                    right: -140px;
+                }
+            }
+            @media (max-width: 979px) {
+                &:nth-child(1) {
+                    top: -20px;
+                    left: -90px;
+                }
+                &:nth-child(2) {
+                    top: 50px;
+                    left: -130px;
+                }
+                &:nth-child(3) {
+                    top: 115px;
+                    left: -130px;
+                }
+                &:nth-child(4) {
+                    top: 190px;
+                    left: -90px;
+                }
+
+                &:nth-child(5) {
+                    top: -20px;
+                    right: -90px;
+                }
+                &:nth-child(6) {
+                    top: 50px;
+                    right: -130px;
+                }
+                &:nth-child(7) {
+                    top: 115px;
+                    right: -130px;
+                }
+                &:nth-child(8) {
+                    top: 180px;
+                    right: -90px;
+                }
+            }
+            @media (max-width: 659px) {
+                &:nth-child(1) {
+                    top: 0;
+                    left: 70px;
+                }
+                &:nth-child(2) {
+                    top: calc(50% - 80px);
+                    left: 30px;
+                }
+                &:nth-child(3) {
+                    top: calc(50% + 20px);
+                    left: 30px;
+                }
+                &:nth-child(4) {
+                    top: calc(100% - 40px);
+                    left: 70px;
+                }
+
+                &:nth-child(5) {
+                    top: 0;
+                    right: 70px;
+                }
+                &:nth-child(6) {
+                    top: calc(50% - 80px);
+                    right: 30px;
+                }
+                &:nth-child(7) {
+                    top: calc(50% + 10px);
+                    right: 30px;
+                }
+                &:nth-child(8) {
+                    top: calc(100% - 50px);
+                    right: 70px;
+                }
+            }
+            @media (max-width: 529px) {
+                &:nth-child(2),
+                &:nth-child(6) {
+                    top: calc(50% - 50px);
+                }
+                &:nth-child(3) {
+                    top: calc(50% + 10px);
+                }
+
+                &:nth-child(7) {
+                    top: calc(50%);
+                }
+                &:nth-child(8) {
+                    top: calc(100% - 45px);
+                }
+            }
+            @media (max-width: 419px) {
+                &:nth-child(1),
+                &:nth-child(4) {
+                    left: 40px;
+                }
+                &:nth-child(2),
+                &:nth-child(3) {
+                    left: 20px;
+                }
+                &:nth-child(5),
+                &:nth-child(8) {
+                    right: 40px;
+                }
+                &:nth-child(6),
+                &:nth-child(7) {
+                    right: 20px;
+                }
+                &:nth-child(7) {
+                    top: calc(50% - 5px);
+                }
+            }
+        }
+    }
+}
+/*_____ 𝔈𝔫𝔡 items [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/

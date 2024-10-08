@@ -1,0 +1,204 @@
+/*_____ 𝔅𝔢𝔤𝔦𝔫 header [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: #1d1f1e;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	transition: box-shadow 0.3s ease 0s;
+	&.-fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		border-bottom: none;
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+		.header__content {
+			height: 70px;
+		}
+		.header__logo {
+			flex: 0 0 150px;
+			width: 150px;
+			height: 42px;
+			margin: 0px 50px 0px 0px;
+			@media (max-width: $md4 + px) {
+				flex: 0 0 115px;
+				width: 115px;
+				height: 32px;
+			}
+		}
+	}
+	&__content {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 100px;
+		z-index: 100;
+		transition: height 0.3s ease 0s;
+		@media (max-width: $md4 + px) {
+			height: 70px;
+		}
+	}
+
+	&__logo {
+		z-index: 101;
+		flex: 0 0 178px;
+		width: 178px;
+		height: 50px;
+		overflow: hidden;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: $md2 + px) {
+			margin: 0px 50px 0px 0px;
+		}
+		@media (max-width: $md3 + px) {
+			flex: 0 0 150px;
+			width: 150px;
+			height: 42px;
+		}
+		@media (max-width: $md4 + px) {
+			flex: 0 0 115px;
+			width: 115px;
+			height: 32px;
+		}
+	}
+
+	&__burger {
+		display: none;
+		position: relative;
+		width: 30px;
+		height: 16px;
+		cursor: pointer;
+		z-index: 101;
+
+		@media (max-width: $md4 + px) {
+			display: block;
+		}
+
+		&:before,
+		&:after {
+			content: "";
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+		}
+
+		&:before {
+			top: 0;
+			transition: all 0.3s ease 0s;
+		}
+		&:after {
+			bottom: 0;
+			transition: all 0.3s ease 0s;
+		}
+
+		span {
+			position: absolute;
+			background-color: #fff;
+			height: 2px;
+			left: 0;
+			width: 100%;
+			top: 7px;
+		}
+		&.-active {
+			&:before {
+				transform: rotate(45deg);
+				top: 7px;
+			}
+			span {
+				transform: scale(0);
+			}
+			&:after {
+				transform: rotate(-45deg);
+				bottom: 7px;
+			}
+		}
+	}
+
+	&__menu {
+		@media (max-width: $md2 + px) {
+			flex: 1 1 auto;
+		}
+		@media (max-width: $md4 + px) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: -100vh;
+			background-color: #131715;
+			padding: 90px 20px 0px 20px;
+			overflow: auto;
+			opacity: 0;
+			transition: top 0.3s ease 0s, opacity 0.3s ease 0s;
+			&.-active {
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		@media (max-width: $md2 + px) {
+			justify-content: space-between;
+		}
+		@media (max-width: $md4 + px) {
+			flex-direction: column;
+			align-items: center;
+		}
+		li {
+			margin: 0px 0px 0px 90px;
+			button {
+				background: none;
+			}
+
+			@media (max-width: 1479px) {
+				margin: 0px 0px 0px 50px;
+			}
+			@media (max-width: $md2 + px) {
+				margin: 0px;
+			}
+			@media (max-width: $md4 + px) {
+				margin: 0px 0px 30px 0px;
+			}
+			@media (max-width: $md5 + px) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+
+	&__link {
+		color: rgba(255, 255, 255, 0.8);
+		font-size: 18px;
+		font-weight: 400;
+		cursor: pointer;
+		transition: color 0.3s ease 0s;
+		@media (max-width: $md3 + px) {
+			font-size: 15px;
+		}
+		@media (max-width: $md4 + px) {
+			font-size: 21px;
+		}
+		@media (max-width: $md5 + px) {
+			font-size: 18px;
+		}
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
+		&.-active {
+			font-weight: 700;
+			background: -webkit-linear-gradient(260deg, #fbee70 15%, #c28b38 50%, #e4ae40 95%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+/*_____ 𝔈𝔫𝔡 header [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/

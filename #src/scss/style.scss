@@ -1,0 +1,195 @@
+@import "mixins";
+@import "fonts";
+
+$fontOne: "Montserrat";
+$fontTwo: "Montserrat";
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1744;
+$md1: $maxWidthContainer + 36;
+$md2: 1189.98;
+$md3: 1199.98;
+$md4: 919.98;
+$md5: 479.98;
+
+@import "null";
+
+body {
+	color: #fff;
+	background: #131715;
+	font-size: 14px;
+	&.-lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.-container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	@media (max-width: $md1+px) {
+		max-width: none;
+		width: 100%;
+		padding: 0 18px;
+	}
+	@media (max-width: $md3+px) {
+		padding: 0 10px;
+	}
+}
+
+@import "ui";
+/*_____ 𝔅𝔢𝔤𝔦𝔫 main grid [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+
+.page {
+	flex: 1 1 auto;
+}
+
+.section {
+	position: relative;
+	padding: 50px 0;
+	box-sizing: border-box;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	@media (max-width: $md4 + px) {
+		padding: 30px 0;
+	}
+	&.-pebble {
+		background-color: #1d1f1e;
+	}
+	&.-charcoal {
+		background: radial-gradient(46.94% 196.41% at 55.73% 56.97%, #262626 0%, #171b18 63.02%);
+	}
+
+	&__title {
+		position: relative;
+		z-index: 1;
+		color: #fff;
+		font-size: 38px;
+		line-height: 1.225;
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 7px;
+		margin-bottom: 30px;
+		@media (max-width: $md3 + px) {
+			font-size: 32px;
+			span.-big {
+				font-size: 42px;
+			}
+		}
+		@media (max-width: $md4 + px) {
+			font-size: 28px;
+			span.-big {
+				font-size: 32px;
+			}
+		}
+		@media (max-width: $md5 + px) {
+			font-size: 21px;
+			span.-big {
+				font-size: 24px;
+			}
+		}
+	}
+	&__subtitle {
+		font-size: 32px;
+		line-height: 1.25;
+		font-weight: 600;
+		margin-bottom: 30px;
+		&.-mini {
+			font-size: 21px;
+		}
+		@media (max-width: $md3 + px) {
+			font-size: 24px;
+			&.-mini {
+				font-size: 21px;
+			}
+		}
+		@media (max-width: $md4 + px) {
+			font-size: 21px;
+			margin-bottom: 20px;
+			&.-mini {
+				font-size: 18px;
+			}
+		}
+		@media (max-width: $md5 + px) {
+			font-size: 18px;
+			margin-bottom: 10px;
+			&.-mini {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1.25;
+		font-weight: 500;
+	}
+	&__list {
+		li {
+			position: relative;
+			font-size: 18px;
+			line-height: 1.25;
+			margin-bottom: 20px;
+			font-weight: 500;
+			padding: 0px 0px 0px 30px;
+			@media (max-width: $md3 + px) {
+				font-size: 16px;
+				padding: 0px 0px 0px 25px;
+			}
+			@media (max-width: $md5 + px) {
+				font-size: 15px;
+				line-height: 1.375;
+			}
+			&:before {
+				position: absolute;
+				content: "";
+				width: 8px;
+				height: 6px;
+				left: 0;
+				top: 8px;
+				background-color: #c28b38;
+				box-shadow: 0 0 10px rgba(251, 238, 112, 0.5);
+			}
+		}
+	}
+}
+span {
+	&.-big {
+		font-size: 50px;
+	}
+}
+.-silver {
+	background: -webkit-linear-gradient(260deg, #d5d5da 15%, #575662 50%, #c8c6cc 95%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.-gold {
+	background: -webkit-linear-gradient(260deg, #fbee70 15%, #c28b38 50%, #e4ae40 95%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.-grey {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+/*_____ 𝔈𝔫𝔡 main grid [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+/*_____ 𝔅𝔢𝔤𝔦𝔫 blocks [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+@import "crypto";
+@import "tap";
+@import "roadmap";
+@import "risks";
+@import "partners";
+
+/*_____ 𝔈𝔫𝔡 blocks [𝔰𝔶𝔪𝔟𝔶𝔞𝔫𝔷] _____*/
+
+@import "header";
+@import "listing";
+@import "footer";
+@import "home";
